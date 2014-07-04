@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = SectionYield -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => SectionYield %></h1>
+</div>
 
-<p>
-  <strong>Budget:</strong>
-  <%= @section_yield.budget %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:budget) %></dt>
+      <dd><pre class="prettyprint"><%= @section_yield.budget %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:actual) %></dt>
+      <dd><pre class="prettyprint"><%= @section_yield.actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:year) %></dt>
+      <dd><pre class="prettyprint"><%= @section_yield.year %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Actual:</strong>
-  <%= @section_yield.actual %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              section_yields_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_section_yield_path(@section_yield), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              section_yield_path(@section_yield),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @section_yield.year %>
-</p>
-
-<p>
-  <strong>Section:</strong>
-  <%= @section_yield.section %>
-</p>
-
-<%= link_to 'Edit', edit_section_yield_path(@section_yield) %> |
-<%= link_to 'Back', section_yields_path %>
