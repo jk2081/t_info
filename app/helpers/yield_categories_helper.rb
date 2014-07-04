@@ -1,0 +1,2 @@
+module YieldCategoriesHelper
+end

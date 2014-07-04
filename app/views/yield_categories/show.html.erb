@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yield_category.name %>
+</p>
+
+<%= link_to 'Edit', edit_yield_category_path(@yield_category) %> |
+<%= link_to 'Back', yield_categories_path %>
