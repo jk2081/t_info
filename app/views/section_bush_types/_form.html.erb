@@ -1,0 +1,13 @@
+<%= simple_form_for(@section_bush_type) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :year %>
+    <%= f.association :section %>
+    <%= f.association :bush_type %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

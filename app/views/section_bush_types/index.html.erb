@@ -1,0 +1,29 @@
+<h1>Listing section_bush_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Section</th>
+      <th>Bush type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @section_bush_types.each do |section_bush_type| %>
+      <tr>
+        <td><%= section_bush_type.year %></td>
+        <td><%= section_bush_type.section %></td>
+        <td><%= section_bush_type.bush_type %></td>
+        <td><%= link_to 'Show', section_bush_type %></td>
+        <td><%= link_to 'Edit', edit_section_bush_type_path(section_bush_type) %></td>
+        <td><%= link_to 'Destroy', section_bush_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Section bush type', new_section_bush_type_path %>

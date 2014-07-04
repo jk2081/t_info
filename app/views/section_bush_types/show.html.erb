@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @section_bush_type.year %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_bush_type.section %>
+</p>
+
+<p>
+  <strong>Bush type:</strong>
+  <%= @section_bush_type.bush_type %>
+</p>
+
+<%= link_to 'Edit', edit_section_bush_type_path(@section_bush_type) %> |
+<%= link_to 'Back', section_bush_types_path %>
