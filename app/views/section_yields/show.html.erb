@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @section_yield.budget %>
+</p>
+
+<p>
+  <strong>Actual:</strong>
+  <%= @section_yield.actual %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @section_yield.year %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_yield.section %>
+</p>
+
+<%= link_to 'Edit', edit_section_yield_path(@section_yield) %> |
+<%= link_to 'Back', section_yields_path %>

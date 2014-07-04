@@ -1,0 +1,14 @@
+<%= simple_form_for(@section_yield) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :budget %>
+    <%= f.input :actual %>
+    <%= f.input :year %>
+    <%= f.association :section %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
