@@ -1,16 +1,40 @@
-<%= simple_form_for(@section) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :code %>
-    <%= f.input :name %>
-    <%= f.input :area %>
-    <%= f.input :yop_start %>
-    <%= f.input :yop_end %>
-    <%= f.association :garden %>
+<%= form_for @section, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :code, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :code, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :area, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :area, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yop_start, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yop_start, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yop_end, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yop_end, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  sections_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

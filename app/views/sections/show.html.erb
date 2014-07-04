@@ -1,34 +1,32 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Section -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Section %></h1>
+</div>
 
-<p>
-  <strong>Code:</strong>
-  <%= @section.code %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:code) %></dt>
+      <dd><pre class="prettyprint"><%= @section.code %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @section.name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:area) %></dt>
+      <dd><pre class="prettyprint"><%= @section.area %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yop_start) %></dt>
+      <dd><pre class="prettyprint"><%= @section.yop_start %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yop_end) %></dt>
+      <dd><pre class="prettyprint"><%= @section.yop_end %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @section.name %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              sections_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_section_path(@section), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              section_path(@section),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Area:</strong>
-  <%= @section.area %>
-</p>
-
-<p>
-  <strong>Yop start:</strong>
-  <%= @section.yop_start %>
-</p>
-
-<p>
-  <strong>Yop end:</strong>
-  <%= @section.yop_end %>
-</p>
-
-<p>
-  <strong>Garden:</strong>
-  <%= @section.garden %>
-</p>
-
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>
