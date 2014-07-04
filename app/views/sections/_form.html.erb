@@ -1,0 +1,16 @@
+<%= simple_form_for(@section) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :code %>
+    <%= f.input :name %>
+    <%= f.input :area %>
+    <%= f.input :yop_start %>
+    <%= f.input :yop_end %>
+    <%= f.association :garden %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

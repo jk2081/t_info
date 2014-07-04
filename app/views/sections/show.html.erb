@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @section.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @section.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @section.area %>
+</p>
+
+<p>
+  <strong>Yop start:</strong>
+  <%= @section.yop_start %>
+</p>
+
+<p>
+  <strong>Yop end:</strong>
+  <%= @section.yop_end %>
+</p>
+
+<p>
+  <strong>Garden:</strong>
+  <%= @section.garden %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

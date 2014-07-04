@@ -1,0 +1,35 @@
+<h1>Listing sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Yop start</th>
+      <th>Yop end</th>
+      <th>Garden</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sections.each do |section| %>
+      <tr>
+        <td><%= section.code %></td>
+        <td><%= section.name %></td>
+        <td><%= section.area %></td>
+        <td><%= section.yop_start %></td>
+        <td><%= section.yop_end %></td>
+        <td><%= section.garden %></td>
+        <td><%= link_to 'Show', section %></td>
+        <td><%= link_to 'Edit', edit_section_path(section) %></td>
+        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Section', new_section_path %>
