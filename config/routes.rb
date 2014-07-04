@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :section_divisions
+
   resources :section_yields
 
   resources :section_vacancies
