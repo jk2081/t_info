@@ -1,0 +1,13 @@
+<%= simple_form_for(@section_prune_type) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :year %>
+    <%= f.association :section %>
+    <%= f.association :prune_type %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

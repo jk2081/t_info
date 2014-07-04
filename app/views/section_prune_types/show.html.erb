@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @section_prune_type.year %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_prune_type.section %>
+</p>
+
+<p>
+  <strong>Prune type:</strong>
+  <%= @section_prune_type.prune_type %>
+</p>
+
+<%= link_to 'Edit', edit_section_prune_type_path(@section_prune_type) %> |
+<%= link_to 'Back', section_prune_types_path %>

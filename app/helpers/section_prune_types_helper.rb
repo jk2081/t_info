@@ -1,0 +1,2 @@
+module SectionPruneTypesHelper
+end

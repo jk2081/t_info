@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :section_prune_types
+
   resources :section_bush_types
 
   resources :bush_types
