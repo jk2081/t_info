@@ -1,6 +1,5 @@
-<h1>Editing division</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @division %> |
-<%= link_to 'Back', divisions_path %>
+<%- model_class = Division -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Division %></h1>
+</div>
+<%= render :partial => 'form' %>
