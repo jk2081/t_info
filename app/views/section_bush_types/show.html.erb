@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = SectionBushType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => SectionBushType %></h1>
+</div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @section_bush_type.year %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:year) %></dt>
+      <dd><pre class="prettyprint"><%= @section_bush_type.year %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Section:</strong>
-  <%= @section_bush_type.section %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              section_bush_types_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_section_bush_type_path(@section_bush_type), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              section_bush_type_path(@section_bush_type),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Bush type:</strong>
-  <%= @section_bush_type.bush_type %>
-</p>
-
-<%= link_to 'Edit', edit_section_bush_type_path(@section_bush_type) %> |
-<%= link_to 'Back', section_bush_types_path %>
