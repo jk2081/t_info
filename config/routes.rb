@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :gardens
+
   resources :sections
 
   resources :divisions
