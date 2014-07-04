@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :divisions
+
   resources :prune_types
 
   resources :yield_categories
