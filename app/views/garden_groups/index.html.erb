@@ -1,0 +1,25 @@
+<h1>Listing garden_groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @garden_groups.each do |garden_group| %>
+      <tr>
+        <td><%= garden_group.name %></td>
+        <td><%= link_to 'Show', garden_group %></td>
+        <td><%= link_to 'Edit', edit_garden_group_path(garden_group) %></td>
+        <td><%= link_to 'Destroy', garden_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Garden group', new_garden_group_path %>

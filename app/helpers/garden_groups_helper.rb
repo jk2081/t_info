@@ -1,0 +1,2 @@
+module GardenGroupsHelper
+end
