@@ -5,4 +5,5 @@ class Section < ActiveRecord::Base
   has_many :section_bush_types
   has_many :section_divisions
   has_many :section_yields
+  has_many :section_vacancies
 end
