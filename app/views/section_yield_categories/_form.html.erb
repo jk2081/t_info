@@ -1,0 +1,13 @@
+<%= simple_form_for(@section_yield_category) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :year %>
+    <%= f.association :yield_category %>
+    <%= f.association :section %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

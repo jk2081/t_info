@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @section_yield_category.year %>
+</p>
+
+<p>
+  <strong>Yield category:</strong>
+  <%= @section_yield_category.yield_category %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_yield_category.section %>
+</p>
+
+<%= link_to 'Edit', edit_section_yield_category_path(@section_yield_category) %> |
+<%= link_to 'Back', section_yield_categories_path %>
