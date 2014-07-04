@@ -1,5 +1,6 @@
-<h1>New yield_category</h1>
+<%- model_class = YieldCategory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => YieldCategory %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', yield_categories_path %>

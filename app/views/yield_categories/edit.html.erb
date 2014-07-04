@@ -1,6 +1,5 @@
-<h1>Editing yield_category</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @yield_category %> |
-<%= link_to 'Back', yield_categories_path %>
+<%- model_class = YieldCategory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => YieldCategory %></h1>
+</div>
+<%= render :partial => 'form' %>
