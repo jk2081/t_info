@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_plants: 1
+  date_of_count: 2014-07-04 13:52:56
+  vacancy: 1.5
+  section_id: 
+
+two:
+  num_plants: 1
+  date_of_count: 2014-07-04 13:52:56
+  vacancy: 1.5
+  section_id: 
