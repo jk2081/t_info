@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: MyString
+  section_id: 
+  division_id: 
+
+two:
+  year: MyString
+  section_id: 
+  division_id: 
