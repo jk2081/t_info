@@ -1,0 +1,14 @@
+<%= simple_form_for(@section_vacancy) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :num_plants %>
+    <%= f.input :date_of_count %>
+    <%= f.input :vacancy %>
+    <%= f.association :section %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

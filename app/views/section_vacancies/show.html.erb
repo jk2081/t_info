@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num plants:</strong>
+  <%= @section_vacancy.num_plants %>
+</p>
+
+<p>
+  <strong>Date of count:</strong>
+  <%= @section_vacancy.date_of_count %>
+</p>
+
+<p>
+  <strong>Vacancy:</strong>
+  <%= @section_vacancy.vacancy %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_vacancy.section %>
+</p>
+
+<%= link_to 'Edit', edit_section_vacancy_path(@section_vacancy) %> |
+<%= link_to 'Back', section_vacancies_path %>
