@@ -1,31 +1,40 @@
-<h1>Listing section_vacancies</h1>
-
-<table>
+<%- model_class = SectionVacancy -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => SectionVacancy %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Num plants</th>
-      <th>Date of count</th>
-      <th>Vacancy</th>
-      <th>Section</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:num_plants) %></th>
+      <th><%= model_class.human_attribute_name(:date_of_count) %></th>
+      <th><%= model_class.human_attribute_name(:vacancy) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @section_vacancies.each do |section_vacancy| %>
       <tr>
+        <td><%= section_vacancy.id %></td>
         <td><%= section_vacancy.num_plants %></td>
         <td><%= section_vacancy.date_of_count %></td>
         <td><%= section_vacancy.vacancy %></td>
-        <td><%= section_vacancy.section %></td>
-        <td><%= link_to 'Show', section_vacancy %></td>
-        <td><%= link_to 'Edit', edit_section_vacancy_path(section_vacancy) %></td>
-        <td><%= link_to 'Destroy', section_vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l section_vacancy.created_at, format: :long %></td>
+        <td>
+          <%= link_to section_vacancy_path(section_vacancy), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to section_vacancy_path(section_vacancy), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Section vacancy', new_section_vacancy_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_section_vacancy_path,
+            :class => 'btn btn-primary' %>

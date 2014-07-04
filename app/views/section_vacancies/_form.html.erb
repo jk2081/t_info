@@ -1,14 +1,28 @@
-<%= simple_form_for(@section_vacancy) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :num_plants %>
-    <%= f.input :date_of_count %>
-    <%= f.input :vacancy %>
-    <%= f.association :section %>
+<%= form_for @section_vacancy, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :num_plants, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :num_plants, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_of_count, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :date_of_count, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vacancy, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :vacancy, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  section_vacancies_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
