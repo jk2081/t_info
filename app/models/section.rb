@@ -3,4 +3,5 @@ class Section < ActiveRecord::Base
   has_many :section_yield_categories
   has_many :section_prune_types
   has_many :section_bush_types
+  has_many :section_divisions
 end
