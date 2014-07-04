@@ -1,13 +1,16 @@
-<%= simple_form_for(@section_yield_category) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :year %>
-    <%= f.association :yield_category %>
-    <%= f.association :section %>
+<%= form_for @section_yield_category, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :year, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :year, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  section_yield_categories_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
